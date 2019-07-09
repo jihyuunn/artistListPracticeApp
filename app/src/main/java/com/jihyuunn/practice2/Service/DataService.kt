@@ -63,18 +63,42 @@ object DataService {
     val matisse = listOf(
         Painting("MATISSE 1", "matisse1"),
         Painting("MATISSE 2", "matisse2"),
-        Painting("MATISSE 3", "matisse3"),
+        Painting("MATISSE 3", "matisse5"),
         Painting("MATISSE 4", "matisse4"),
-        Painting("MATISSE 1", "matisse1"),
-        Painting("MATISSE 2", "matisse2"),
-        Painting("MATISSE 3", "matisse3"),
+        Painting("MATISSE 1", "matisse6"),
+        Painting("MATISSE 2", "matisse1"),
+        Painting("MATISSE 3", "matisse2"),
         Painting("MATISSE 4", "matisse4"),
-        Painting("MATISSE 1", "matisse1"),
-        Painting("MATISSE 2", "matisse2"),
-        Painting("MATISSE 3", "matisse3"),
+        Painting("MATISSE 1", "matisse5"),
+        Painting("MATISSE 2", "matisse6"),
+        Painting("MATISSE 3", "matisse2"),
         Painting("MATISSE 4", "matisse4")
 
     )
 
+    val monet = listOf(
+        Painting("MONET 1", "monet1"),
+        Painting("MONET 2", "monet2"),
+        Painting("MONET 3", "monet3"),
+        Painting("MONET 4", "monet4"),
+        Painting("MONET 1", "monet1"),
+        Painting("MONET 2", "monet2"),
+        Painting("MONET 3", "monet3"),
+        Painting("MONET 4", "monet4"),
+        Painting("MONET 1", "monet1"),
+        Painting("MONET 2", "monet2"),
+        Painting("MONET 3", "monet3"),
+        Painting("MONET 4", "monet4")
 
+    )
+
+    fun getCategory(category: String?) : List<Painting> {
+        return when(category) {
+            "DAVID HOCKNEY" -> hockney
+            "VAN GOGH" -> gogh
+            "ALEX KATZ" -> katz
+            "HENRI MATISSE" -> matisse
+            else -> monet
+        }
+    }
 }
