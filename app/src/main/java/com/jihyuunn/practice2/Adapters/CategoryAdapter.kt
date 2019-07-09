@@ -4,24 +4,19 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.jihyuunn.practice2.Model.Category
 import com.jihyuunn.practice2.R
-import com.jihyuunn.practice2.Service.DataService.categories
-import kotlinx.android.synthetic.main.activity_main.view.*
 
-class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapter() {
-    val context = context
-    val categories = categories
+class CategoryAdapter(val context: Context, val categories: List<Category>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val categoryView: View
         categoryView = LayoutInflater.from(context).inflate(R.layout.category_item, null)
 
-        val imageView : ImageView = categoryView.findViewById(R.id.imageView)
+        val imageView : ImageView = categoryView.findViewById(R.id.artistImage)
         val artistNameTxt : TextView = categoryView.findViewById(R.id.artistNameTxt)
 
 
